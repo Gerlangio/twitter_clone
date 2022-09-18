@@ -111,10 +111,17 @@ textarea {
         padding: 15px 10px;
         display: block;
     }
-    .sidebar ul li span {
+    .sidebar ul li span, .sidebar__tweet, .right__sidebar {
         display: none;
     }
-    .right__sidebar {
-        display: none;
+    .grid-container {
+        grid-template-columns: 0.3fr 1.7fr;
+        max-width: 700px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "sidebar main ."
+        "sidebar main .";
     }
+    .sidebar {grid-area: sidebar; }
+    .main {grid-area: main; }
 }
