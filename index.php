@@ -34,5 +34,8 @@ if(isset($_POST['btn_add_post'])){
 				</div>
 			</div>
 		</div>
+
+		<?php require_once "tweet.php"; ?>
+
 	</div>
 </div>
