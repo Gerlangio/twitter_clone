@@ -12,5 +12,9 @@
     $sql = " insert into usuarios(usuario, email, senha) values ('$usuario', '$email', '$senha') ";
 
     //executar a query
-    mysqli_query($link, $sql);
+    if(mysqli_query($link, $sql)){
+        echo 'Usuário registrado com sucesso!';
+    }else{
+        echo 'Erro ao registrar o usuário!';
+    }
 ?>
