@@ -20,5 +20,13 @@
             $this->senha,
             $this->database
         );
+
+        //ajustar o charset de comunicação entre aplicaão e banco de dados.
+        mysqli_set_charset($con, 'utf-8');
+
+        //verifica se houve erro de conexão
+        if(mysqli_connect_errno()){
+            echo 'Erro ao tentar se conectar com o BD MySQL: '.mysqli_connect_error();
+        }
     }
 ?>
