@@ -1,4 +1,7 @@
 <?php
+
+class db {
+
     //host
     private $host = 'localhost';
 
@@ -28,5 +31,7 @@
         if(mysqli_connect_errno()){
             echo 'Erro ao tentar se conectar com o BD MySQL: '.mysqli_connect_error();
         }
+        return $con;
     }
+}
 ?>
