@@ -8,8 +8,6 @@ while($row = mysqli_detch_assoc($data))
     $post_text = $row['post_text'];
     $post_date = $row['post_date'];
 
-?>
-
 <div class="tweet__box">
     <div class="tweet__left">
         <img src="images/icone_twitter.png" alt="">
