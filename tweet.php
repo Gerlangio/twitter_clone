@@ -1,9 +1,10 @@
-<?php 
+<?php
 
-$query = "SELECT * FROM post ORDER BY post_id DESC";
+$query = "SELECT * FROM posts ORDER BY post_id DESC";
 $data = mysqli_query($con,$query);
 
-while($row = mysqli_detch_assoc($data)){
+while($row = mysqli_detch_assoc($data))
+{
     $post_text = $row['post_text'];
     $post_date = $row['post_date'];
 
@@ -40,3 +41,7 @@ while($row = mysqli_detch_assoc($data)){
         </div>
     </div>
 </div>
+
+<?php 
+}
+?>
