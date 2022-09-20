@@ -3,10 +3,12 @@
 $query = "SELECT * FROM posts ORDER BY post_id DESC";
 $data = mysqli_query($con,$query);
 
-while($row = mysqli_detch_assoc($data))
+while($row = mysql_fetch_assoc($data))
 {
     $post_text = $row['post_text'];
     $post_date = $row['post_date'];
+
+?>
 
 <div class="tweet__box">
     <div class="tweet__left">
